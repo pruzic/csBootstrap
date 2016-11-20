@@ -8,16 +8,18 @@
 </head>
 
 <body>
-    <div class='container'>
-        <div class='row'>
-            <div class='col-md-12'>
-                <h1>Blasting Off with Bootstrap</h1>
-                <ul>
-                    <li><a href='tickets.html'>Tickets</a></li>
-                    <li><a href='stations.html'>Stations</a></li>
-                    <li><a href='about.html'>About</a></li>
-                </ul>
-            </div>
+    <div class='navbar navbar-default navbar-static-top'>
+        <div class='container'>
+            <!--<div class='row'>
+                <div class='col-md-12'>-->
+            <a href='index.html' class='navbar-brand'>Blasting Off with Bootstrap</a>
+            <ul class='nav navbar-nav navbar-right'>
+                <li><a href='tickets.html'>Tickets</a></li>
+                <li><a href='stations.html'>Stations</a></li>
+                <li><a href='about.html'>About</a></li>
+            </ul>
+            <!--</div>
+            </div>-->
         </div>
     </div>
 
@@ -100,6 +102,32 @@
             </div>
         </div>
     </div>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <h2>Plan Your Trip Today!</h2>
+                <ul class='nav nav-tabs'>
+                    <li class="active"><a href='#time'>Today's Times</a></li>
+                    <li><a href='#deals'>Hot Deals</a></li>
+                    <li><a href='#forecast'>Forecast</a></li>
+                </ul>
+
+                <div class='tab-content'>
+                    <div class='tab-pane active fade' id='time'>
+                        <p>Today's Time here</p>
+                    </div>
+                    <div class='tab-pane fade' id='deals'>
+                        <p>Deals here</p>
+                    </div>
+                    <div class='tab-pane fade' id='forecast'>
+                        <p>Forecast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class='footer'>
         <div class='container'>
             <div class='row'>
@@ -146,6 +174,15 @@
 
     <script src='Scripts/jquery-3.1.1.min.js'></script>
     <script src='Scripts/bootstrap.min.js'></script>
+
+    <script>
+        $(function() {
+            $('.nav-tabs a').click(function(e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
 </body>
 
 </html>
